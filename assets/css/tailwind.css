@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 修复 Tailwind preflight 重置 antd 组件样式的问题 */
+button, [type='button'], [type='reset'], [type='submit'] {
+  background-color: unset;
+}

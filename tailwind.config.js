@@ -12,8 +12,5 @@ export default {
     extend: {},
   },
   plugins: [],
-  corePlugins: {
-    preflight: false, // 禁用 Tailwind 的基础样式重置，避免和 Ant Design Vue 样式冲突
-  }
 }
 
