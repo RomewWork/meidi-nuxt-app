@@ -20,8 +20,16 @@ export default defineNuxtConfig({
     quality: 80,
   },
 
+  // 必须配置 transpile，否则 Vercel 生产环境下 Ant Design Vue 可能无法正常解析
+  build: {
+    transpile: ['ant-design-vue', '@ant-design/icons-vue'],
+  },
+
   // Vite 构建优化
   vite: {
+    ssr: {
+      noExternal: ['ant-design-vue', '@ant-design/icons-vue'],
+    },
     build: {
       cssCodeSplit: true,
       chunkSizeWarningLimit: 2000,
