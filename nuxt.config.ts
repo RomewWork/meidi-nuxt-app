@@ -4,6 +4,12 @@ export default defineNuxtConfig({
     '@ant-design-vue/nuxt',
     '@nuxt/image'
   ],
+
+  antd: {
+    // 开启 SSR 的样式提取，解决生产环境（Vercel）刷新后样式丢失或不生效的问题
+    extractStyle: true,
+  },
+
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css'
   },
